@@ -48,6 +48,10 @@ header a:hover {
 #response p {
     color: lightblue;
 }
+#response img {
+    width: 50px;
+    margin-top: 10px;
+}
 
 h1 {
     font-size: 64px;

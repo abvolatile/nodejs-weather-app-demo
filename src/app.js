@@ -79,7 +79,8 @@ app.get('/weather', (req, res) => {
         res.send({
             forecast: result.forecast,
             location: req.query.location,
-            address: result.place
+            address: result.place,
+            icon: result.icon
         });
     });
 });

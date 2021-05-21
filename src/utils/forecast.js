@@ -18,7 +18,8 @@ const getWeatherForecast = (location, callback) => {
                 } else {
                     callback({ 
                         forecast: `It is ${body.current.temperature} degrees, ${body.current.weather_descriptions[0]}, and there is a ${body.current.precip}% chance of rain`,
-                        place: place
+                        place: place,
+                        icon: body.current.weather_icons[0]
                     });
                 }
             });
