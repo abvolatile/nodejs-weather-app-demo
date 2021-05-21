@@ -17,7 +17,7 @@ const getWeatherForecast = (location, callback) => {
                     callback({ error: 'Unable to find location' });
                 } else {
                     callback({ 
-                        forecast: `It is ${body.current.temperature} degrees, ${body.current.weather_descriptions[0]}, and there is a ${body.current.precip}% chance of rain`,
+                        forecast: `It is ${body.current.temperature} degrees and ${body.current.weather_descriptions[0]}`,
                         place: place,
                         icon: body.current.weather_icons[0]
                     });
