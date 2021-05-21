@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js/Express Weather App</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {{>header}} <!-- how to render a partial view! -->
+
+    <div class="main-content">
+        <p>Get the weather:</p>
+
+        <form id="weather-form">
+            <input type="text" placeholder="enter an address or location">
+            <button>Search</button>
+        </form>
+
+        <div id="response">
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
