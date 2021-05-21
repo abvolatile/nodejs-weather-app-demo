@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
     console.log('Search value: ' + search.value);
 
     //fetch is part of BROWSER code (can't use it in backend node.js code)
-    fetch('http://localhost:3000/weather?location=' + search.value).then((response) => {
+    fetch('/weather?location=' + search.value).then((response) => {
         //fetch returns a Promise, need to call response.json() to get the actual data returned
         response.json().then((data) => {
             if (data.error) {

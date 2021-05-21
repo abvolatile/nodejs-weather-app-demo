@@ -5,6 +5,8 @@ const getWeatherForecast = require('./utils/forecast');
 
 
 const app = express(); //initializes the webserver
+const port = process.env.PORT || 3000;
+//heroku port or 3000 for localhost
 
 // ======================== STATIC DIR ======================== //
 const publicDir = path.join(__dirname, '../public');
@@ -101,13 +103,13 @@ app.get('*', (req, res) => {
 })
 
 
-// ======================== SERVER - localhost:3000 ======================== //
-app.listen(3000, () => {
-    console.log('Server listening on port 3000');
+// ======================== SERVER - heroku port OR localhost:3000 ======================== //
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 }); 
 //once app.js is run, this express server will stay running until we ctrl+c to stop it 
 //needs to be restarted when making changes to the file, UNLESS we use something like nodemon 
 //instead of "node src/app.js", we use "nodemon src/app.js" (will restart automatically when changes are saved)
 
 //IN ORDER to track changes to .hbs files, we need to add something to our command:
-//new: "nodemon src/app.js -e js,hbs"
+//new: "nodemon src/app.js -e js,hbs" <<-- added to package.json scripts as "watch"
