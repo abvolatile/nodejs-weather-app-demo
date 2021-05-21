@@ -35,7 +35,7 @@ app.get('', (req, res) => {
 
     res.render('index', {
         title: 'HOME PAGE!',
-        name: 'Annie'
+        name: 'AnnieB'
     }); 
     //this will automatically send back our handlebars view (bc we set up a view engine)
     //first arg is the VIEW, second is the values we want the view to have access to!
@@ -49,14 +49,14 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'HELP',
         helpText: 'This is some useful text for you',
-        name: 'Annie'
+        name: 'AnnieB'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'ABOUT ME',
-        name: 'Annie'
+        name: 'AnnieB'
     });
 })
 
@@ -86,7 +86,7 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404 Not Found',
-        name: 'Annie',
+        name: 'AnnieB',
         errorMsg: 'nope, cannot find that help article'
     });
 })
@@ -95,7 +95,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404 Not Found',
-        name: 'Annie',
+        name: 'AnnieB',
         errorMsg: 'No can do, bro - page not found'
     });
 })
